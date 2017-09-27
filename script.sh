@@ -13,11 +13,11 @@ fi
 
 sudo add-apt-repository \
     "deb https://apt.dockerproject.org/repo/ \
-    ubuntu-$(lsb_release -cs) \
+    ubuntu-xenial \
     main"
 
-sudo apt update >/dev/null 2>&1
-sudo apt -y install docker-engine
+sudo apt update 
+sudo apt install docker-engine -y
 
 # DOCKER COMPoSE
 sudo curl -L "https://github.com/docker/compose/releases/download/1.13.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
